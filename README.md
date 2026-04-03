@@ -28,3 +28,8 @@ BarrioBook es un sistema de gestión de micro-librería. Este repositorio incluy
 ## Evidencias
 - Reportes HTML en la carpeta Reports
 - Capturas automáticas en la carpeta Screenshots
+
+## Estado de pruebas automatizadas
+- 15/15 pruebas ejecutadas correctamente
+- Cobertura funcional sobre login y CRUD de libros
+- Evidencias generadas en formato HTML y capturas automáticas
