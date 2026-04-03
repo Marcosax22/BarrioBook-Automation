@@ -1,5 +1,4 @@
 ﻿using AventStack.ExtentReports;
-using AventStack.ExtentReports.Reporter;
 using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
@@ -44,12 +43,7 @@ namespace BarrioBook.SeleniumTests.Tests
 
             var reportPath = Path.Combine(ReportsFolder, "BarrioBookSeleniumReport.html");
 
-            var spark = new ExtentSparkReporter(reportPath);
-            spark.Config.DocumentTitle = "BarrioBook Selenium Report";
-            spark.Config.ReportName = "Resultados de pruebas automatizadas";
-
-            Extent = new ExtentReports();
-            Extent.AttachReporter(spark);
+            Extent = ReportManager.GetInstance(reportPath);
         }
 
         [SetUp]
